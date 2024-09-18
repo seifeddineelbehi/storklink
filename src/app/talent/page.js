@@ -14,7 +14,7 @@ export default function Talent() {
   const form = useRef();
   const [emailStatus, setEmailStatus] = useState('');
   const sendEmail = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();  
 
     emailJs
       .sendForm('service_0c1tir6', 'template_zsydxlw', form.current, {
@@ -52,7 +52,7 @@ export default function Talent() {
             <h3 className="font-medium leading-normal text-4xl mb-5 mt-10 text-white font-lexend">
               Rise with Purpose and Precision
             </h3>
-            <p className="text-slate-300 text-lg max-w-4xl mx-auto font-inter">
+            <p className="text-slate-200 text-2xl max-w-6xl mx-auto font-inter">
               At StorkLink, we connect talented professionals with leading
               employers in Germany, aligning your talents and goals with the
               right opportunities. Our personalized support and market expertise

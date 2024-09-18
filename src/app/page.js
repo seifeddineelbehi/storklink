@@ -34,7 +34,7 @@ export default function Index() {
                         </p>
                         
                     </div>
-                </div>
+                </div> 
             </section>
             <About title="About Us" desc="We constantly innovate and refine our services to exceed the expectations of both clients and candidates. Our commitment to excellence is what sets StokLink apart."/>
             <OurServices title="Our Services" desc="This is just a simple text made for this unique and awesome template, you can replace it with any text."/>

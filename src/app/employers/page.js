@@ -52,7 +52,7 @@ export default function Employers() {
             <h3 className="font-medium leading-normal text-4xl mb-5 mt-10 text-white font-lexend">
             Lead with Precision and Insight
             </h3>
-            <p className="text-slate-300 text-lg max-w-4xl mx-auto font-inter">
+            <p className="text-slate-200 text-2xl max-w-6xl mx-auto font-inter">
             At StorkLink, we connect you with top-tier professionals tailored to your needs. Our services combine human expertise and market insights, ensuring you find the best candidates for crucial roles and support your organization’s success.
             </p>
           </div>
