@@ -85,8 +85,8 @@ export default function Navbar(props) {
               id="navbar-navlist"
             >
               <li className={`nav-item`}>
-                <Link1
-                  to="home-talent"
+                <Link
+                  href="/"
                   activeClass="active"
                   spy={true}
                   smooth={true}
@@ -94,7 +94,7 @@ export default function Navbar(props) {
                   className="nav-link"
                 >
                   Home
-                </Link1>
+                </Link>
               </li>
 
               <li className={`nav-item`}>
