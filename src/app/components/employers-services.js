@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Circle, Hexagon } from 'react-feather';
 import { services, employersServices, talentServices } from '../Data/data';
-
+import Image from 'next/image';
 export default function EmployersServices({title, desc}) {
     return (
         <section className="relative md:py-24 py-16 bg-[color:var(--light-grey-color)]" id="services-employers">
@@ -22,12 +22,12 @@ export default function EmployersServices({title, desc}) {
                         return(
                             <div key={index} className="group relative lg:px-6 mt-4 rounded-xl overflow-hidden text-center">
                                 <div className="relative overflow-hidden text-transparent -m-3">
-                                    <Hexagon className="h-28 w-28 fill-[color:var(--darkest-grey-color)] mx-auto rotate-[30deg]"
-                                    ></Hexagon>
-                                    <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-[color:var(--main-color)] rounded-xl text-3xl flex align-middle justify-center items-center">
-                                        <Icon width={30} height={30}/>
-                                    </div>
-                                </div>
+                  <Hexagon className="h-28 w-28 fill-[color:var(--light-grey-color)] mx-auto rotate-[30deg]"></Hexagon>
+                  <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-[color:var(--main-color)] rounded-xl text-3xl flex align-middle justify-center items-center">
+                  <Image src={item.Icon} className="" alt="" width={70} height={70}  />
+                  </div>
+
+                </div>
                                 <div className="mt-6">
                                     <h5  className="text-[color:var(--darkest-grey-color)] font-medium text-lg  font-lexend" >
                                         {item.title}

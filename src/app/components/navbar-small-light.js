@@ -28,7 +28,7 @@ export default function NavbarSmallLight() {
     <>
       <nav
         className={`${
-          navbarTop === true ? "is-sticky bg-[color:var(--dark-grey-color55565B)]" : ""
+          navbarTop === true ? "is-sticky" : ""
         } navbar font-lexend `}
         id="navbar"
       >

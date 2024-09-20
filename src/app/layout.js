@@ -6,13 +6,13 @@ import { Inter , Lexend } from 'next/font/google'
 const inter = Inter({ 
   subsets: ['latin'],
   weight: ['200','300','400','500','600', '700','800'],
-  variable: '--font-inter',
+  variable: '--font-century-gothic',
 });
 
 const lexend = Lexend({ 
   subsets: ['latin'],
   weight: ['200','300','400','500','600', '700','800'],
-  variable: '--font-lexend',
+  variable: '--font-century-gothic',
 })
 
 export const metadata = {

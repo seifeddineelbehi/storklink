@@ -43,17 +43,17 @@ export const services = [
 
 export const mainEmployersServices = [
     {
-        Icon: Unicons.UilAdjustCircle,
+        Icon: "/images/hrm.png",
         title: 'End-to-End Talent Acquisition',
         description: "Managing the entire process of identifying, hiring, and onboarding international talent.",
     },
     {
-        Icon:  Unicons.UilCircuit ,
+        Icon:  "/images/professional-services.png" ,
         title: 'Talent Skill Enhancement & Compliance',
         description: "Ensuring talent undergoes professional development and credential verification to meet industry requirements.",
     },
     {
-        Icon: Unicons.UilFire ,
+        Icon: "/images/acquisition.png" ,
         title: 'Integration & Retention Excellence',
         description: "Promoting smooth cultural integration and implementing strategies for long-term employee retention.",
     },
@@ -61,17 +61,17 @@ export const mainEmployersServices = [
 
 export const mainTalentServices = [
     {
-        Icon: Unicons.UilAdjustCircle,
+        Icon: "/images/travelling.png",
         title: 'Career Mobility & Relocation Solutions',
         description: "Providing comprehensive support for job placement, visa processing, and relocation logistics.",
     },
     {
-        Icon:  Unicons.UilCircuit ,
+        Icon:  "/images/settings.png" ,
         title: 'Skill Enhancement & Credentialing Support',
         description: "Delivering language training and ensuring that qualifications meet German industry standards.",
     },
     {
-        Icon: Unicons.UilFire ,
+        Icon: "/images/maturation.png" ,
         title: 'Integration & Career Development Programs',
         description: "Facilitating cultural integration and fostering long-term career growth and success.",
     },
@@ -79,32 +79,32 @@ export const mainTalentServices = [
 
 export const employersServices = [
     {
-        Icon: Unicons.UilAdjustCircle,
+        Icon: "/images/acquisition.png",
         title: 'Talent Matching',
         description: "We expertly identify and evaluate top talent to ensure a perfect fit for your needs, bringing exceptional candidates directly to your organization.",
     },
     {
-        Icon:  Unicons.UilCircuit ,
+        Icon:  "/images/travel-agent.png" ,
         title: 'Relocation Support',
         description: "We handle all visa and relocation details, ensuring a smooth and efficient transition for your new hires to Germany.",
     },
     {
-        Icon: Unicons.UilFire ,
+        Icon: "/images/management.png" ,
         title: 'Onboarding Solutions',
         description: "We craft tailored onboarding programs that accelerate integration, ensuring your new hires become productive assets swiftly.",
     },
     {
-        Icon: Unicons.UilFlower,
+        Icon: "/images/cultural-diversity.png",
         title: 'Cultural Orientation',
         description: "We provide essential orientation to help employees seamlessly adapt to both their new roles and life in Germany, enhancing their engagement.",
     },
     {
-        Icon: Unicons.UilShoppingBasket,
+        Icon: "/images/hrm.png",
         title: 'Retention Strategies',
         description: "We develop cutting-edge strategies to boost employee retention, securing long-term success and stability for your team.",
     },
     {
-        Icon: Unicons.UilFlipH,
+        Icon: "/images/empowerment.png",
         title: 'Employee Support',
         description: "We offer ongoing support to resolve issues quickly, enhancing employee satisfaction and productivity while reducing turnover.",
     }
@@ -112,32 +112,32 @@ export const employersServices = [
 
 export const talentServices = [
     {
-        Icon: Unicons.UilAdjustCircle,
+        Icon: "/images/deal.png",
         title: 'Fully Sponsored Services',
         description: "Receive all services at no cost, including training and relocation, covered by your employer.",
     },
     {
-        Icon:  Unicons.UilCircuit ,
+        Icon:  "/images/communication.png" ,
         title: 'Mastering the Language',
         description: "Get German language training up to B2 level, tailored to your industry.",
     },
     {
-        Icon: Unicons.UilFire ,
+        Icon: "/images/passport.png" ,
         title: 'Streamlined Visa Process',
         description: "Benefit from a simplified visa application process with hands-on assistance.",
     },
     {
-        Icon: Unicons.UilFlower,
+        Icon: "/images/checking.png",
         title: 'Tailored Qualification Assessment',
         description: "Have your credentials assessed to meet German standards, with support for formal recognition.",
     },
     {
-        Icon: Unicons.UilShoppingBasket,
+        Icon: "/images/intersect.png",
         title: 'Cultural & Professional Integration',
         description: "Access cultural orientation and onboarding services for a smooth transition to life and work in Germany.",
     },
     {
-        Icon: Unicons.UilFlipH,
+        Icon: "/images/goal.png",
         title: 'Career Growth with Long-Term Focus',
         description: "Gain tools and guidance for sustained career development in Germany.",
     }
