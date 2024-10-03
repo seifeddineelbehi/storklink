@@ -42,7 +42,7 @@ export default function About({ title, desc }) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
                   <div className="lg:col-span-5">
                     <div className="relative">
-                      <Image
+                      <img
                         src="/images/our story.jpg"
                         className="rounded-lg shadow-lg relative"
                         alt=""
@@ -107,7 +107,7 @@ export default function About({ title, desc }) {
                   </div>
                   <div className="lg:col-span-5">
                     <div className="relative">
-                      <Image
+                      <img
                         src="/images/our mission.jpg"
                         className="rounded-lg shadow-lg relative"
                         alt=""
@@ -129,7 +129,7 @@ export default function About({ title, desc }) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
                   <div className="lg:col-span-5">
                     <div className="relative">
-                      <Image
+                      <img
                         src="/images/our vision.jpg"
                         className="rounded-lg shadow-lg relative"
                         alt=""
@@ -249,7 +249,7 @@ export default function About({ title, desc }) {
       
                   <div className="lg:col-span-5">
                     <div className="relative">
-                      <Image
+                      <img
                         src="/images/our values.jpg"
                         className="rounded-lg shadow-lg relative"
                         alt=""
@@ -280,8 +280,8 @@ export default function About({ title, desc }) {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
             <div className="lg:col-span-5">
-              <div className="relative">
-                <Image
+              <div className="relative"> 
+                <img
                   src="/images/our story.jpg"
                   className="rounded-lg shadow-lg relative"
                   alt=""
@@ -330,7 +330,7 @@ export default function About({ title, desc }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
           <div className="lg:col-span-5">
               <div className="relative">
-                <Image
+                <img
                   src="/images/our mission.jpg"
                   className="rounded-lg shadow-lg relative"
                   alt=""
@@ -369,7 +369,7 @@ export default function About({ title, desc }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
             <div className="lg:col-span-5">
               <div className="relative">
-                <Image
+                <img
                   src="/images/our vision.jpg"
                   className="rounded-lg shadow-lg relative"
                   alt=""
@@ -414,7 +414,7 @@ export default function About({ title, desc }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
           <div className="lg:col-span-5">
               <div className="relative">
-                <Image
+                <img
                   src="/images/our values.jpg"
                   className="rounded-lg shadow-lg relative"
                   alt=""
