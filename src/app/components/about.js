@@ -289,7 +289,7 @@ export default function About({ title, desc }) {
                   height={0}
                   sizes="100vw"
                   style={{ height: "auto", width: "100%" }}
-                />
+                /> 
                 <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
               </div>
             </div>
