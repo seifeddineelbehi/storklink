@@ -8,13 +8,16 @@ import * as Unicons from "@iconscout/react-unicons";
 export default function NavbarSmallLight() {
   const [isOpen, setMenu] = useState(true);
   const [navbarTop, setNavbarTop] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", windowScroll);
+      window.addEventListener("resize", handleResize);
+      handleResize(); 
     }
     window.scrollTo(0, 0);
-  }, []);
+  }, []); 
 
   function windowScroll() {
     setNavbarTop(
@@ -24,6 +27,10 @@ export default function NavbarSmallLight() {
   const toggleMenu = () => {
     setMenu(!isOpen);
   };
+ 
+  function handleResize() {
+    setIsSmallScreen(window.innerWidth <= 992); // Adjust based on your breakpoints
+  }
   return (
     <>
       <nav
@@ -36,12 +43,29 @@ export default function NavbarSmallLight() {
           {/* Logo */}
           <a className="navbar-brand md:me-8 w-[240px]" href="/">
             <span className="inline-block dark:hidden">
-              <Image 
-                src="/images/Logo-stork.png"
-                alt=""
-                width={140}
-                height={36}
-              />
+            
+            {isSmallScreen ? (
+                <Image
+                  src="/images/Logo-stork.png"
+                  alt=""
+                  width={140}
+                  height={36}
+                />
+              ) : navbarTop === true ? (
+                <Image
+                  src="/images/Logo-stork.png"
+                  alt=""
+                  width={140}
+                  height={36}
+                />
+              ) : (
+                <Image
+                  src="/images/Logo-stork-light.png"
+                  alt=""
+                  width={140}
+                  height={36}
+                />
+              )}
             </span>
             <Image
               src="/images/Logo-stork.png"
@@ -154,7 +178,7 @@ export default function NavbarSmallLight() {
               <li className={`nav-item`}>
                 <Link
                   href="/employers"
-                  className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] rounded-l-full rounded-r-none  font-semibold inline-flex items-center gap-1"
+                  className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] rounded-l-full rounded-r-none  font-normal inline-flex items-center gap-1"
                 >
                   Employers
                 </Link>
@@ -162,7 +186,7 @@ export default function NavbarSmallLight() {
               <li className={`nav-item`}>
                 <Link
                   href="/talent"
-                  className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] rounded-r-full rounded-l-none  font-semibold inline-flex items-center gap-1"
+                  className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] rounded-r-full rounded-l-none  font-normal inline-flex items-center gap-1"
                 >
                   Talents
                 </Link>

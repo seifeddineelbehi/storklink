@@ -60,7 +60,7 @@ export default function OurServices({ title, desc }) {
         <div className="mb-4 text-center" >
           <Link
             href="/employers"
-            className="py-2 px-5 font-semibold inline-block font-normal text-base w-[180px] tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color)] text-[color:var(--dark-grey-color)] rounded-md "
+            className="py-2 px-5 font-medium inline-block  text-base w-[180px] tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color)] text-[color:var(--dark-grey-color)] rounded-md "
           >
             Read More
           </Link>
@@ -115,7 +115,7 @@ export default function OurServices({ title, desc }) {
         <div className="mb-4 text-center" >
           <Link
             href="/talent"
-            className="py-2 px-5 font-semibold inline-block font-normal text-base w-[180px] tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color)] text-[color:var(--dark-grey-color)] rounded-md "
+            className="py-2 px-5  inline-block font-medium text-base w-[180px] tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color)] text-[color:var(--dark-grey-color)] rounded-md "
           >
             Read More
           </Link>

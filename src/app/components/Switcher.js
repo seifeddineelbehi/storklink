@@ -65,7 +65,7 @@ export default function Switcher() {
 
 
             <Link  href="#" onClick={scrollToTop}
-                id="back-to-top" className={`${!scrollToTops ? "hidden":"back-to-top fixed text-lg rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-[color:var(--main-color-hover)] text-white justify-center items-center flex"}`}><Unicons.UilArrowUp width={18}/></Link>
+                id="back-to-top" className={`${!scrollToTops ? "hidden":"back-to-top fixed text-lg rounded-full z-10 bottom-5 end-5 h-9 w-9 text-center bg-[color:var(--main-color)] text-white justify-center items-center flex"}`}><Unicons.UilArrowUp width={18}/></Link>
         </>
     )
 };

@@ -17,7 +17,7 @@
 *,
 :root { 
   --main-color: #FDD142;
-  --main-color-hover: #d8c427;
+  --main-color-hover: #dbb63b;
   --darkest-grey-color: #323232;
   --darkest-grey-color323232: #323232;
   --dark-grey-color: #323232;
@@ -1266,8 +1266,11 @@ video {
 .bg-\[url\(\'\.\.\/\.\.\/assets\/images\/bg\/bg-5\.jpg\'\)\]{
   background-image: url('/images/bg/bg-5.jpg') !important;
 }
-.bg-\[url\(\'\.\.\/\.\.\/assets\/images\/bg\/bg\.jpg\'\)\]{
-  background-image: url('/images/bg/bg.jpg') !important;
+.bg-\[url\(\'\.\.\/\.\.\/assets\/images\/bg\/bg\.jpg\'\)\]{ 
+  background-image: url('/images/bg/main.jpg') !important;
+} 
+.bg-\[url\(\'\.\.\/\.\.\/assets\/images\/bg\/main\.jpg\'\)\]{
+  background-image: url('/images/bg/main.jpg') !important;
 }
 .bg-gradient-to-t{
   background-image: -webkit-gradient(linear, left bottom, left top, from(var(--tw-gradient-stops))) !important;

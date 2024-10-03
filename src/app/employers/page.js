@@ -42,10 +42,13 @@ export default function Employers() {
   return (
     <>
       <Navbar />
-      <section
-        className="py-36 lg:py-56 w-full table relative bg-[url('/images/bg/bg.jpg')] bg-top bg-no-repeat"
-        id="home-employers"
-      >
+    
+        <section className="py-36 lg:py-56 w-full table relative" id="home-employers">
+        <img
+          src="/images/For employers.jpg"
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t to-slate-950/50 via-slate-950/75 from-slate-950"></div>
         <div className="container">
           <div className="grid grid-cols-1 pb-8 text-center mt-10">

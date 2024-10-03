@@ -11,14 +11,16 @@ export default function Navbar(props) {
   const [isOpen, setMenu] = useState(true);
   const [navbarTop, setNavbarTop] = useState(false);
 
-  const pathname = usePathname();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", windowScroll);
+      window.addEventListener("resize", handleResize);
+      handleResize(); 
     }
     window.scrollTo(0, 0);
-  }, []);
+  }, []); 
 
   function windowScroll() {
     setNavbarTop(
@@ -28,6 +30,10 @@ export default function Navbar(props) {
   const toggleMenu = () => {
     setMenu(!isOpen);
   };
+
+  function handleResize() {
+    setIsSmallScreen(window.innerWidth <= 992); // Adjust based on your breakpoints
+  }
 
   return (
     <>
@@ -40,12 +46,28 @@ export default function Navbar(props) {
         <div className="container flex flex-wrap items-center justify-end">
         <a className="navbar-brand md:me-8 w-[240px]" href="/">
             <span className="inline-block dark:hidden">
-              <Image 
-                src="/images/Logo-stork.png"
-                alt=""
-                width={140}
-                height={36}
-              />
+            {isSmallScreen ? (
+                <Image
+                  src="/images/Logo-stork.png"
+                  alt=""
+                  width={140}
+                  height={36}
+                />
+              ) : navbarTop === true ? (
+                <Image
+                  src="/images/Logo-stork.png"
+                  alt=""
+                  width={140}
+                  height={36}
+                />
+              ) : (
+                <Image
+                  src="/images/Logo-stork-light.png"
+                  alt=""
+                  width={140}
+                  height={36}
+                />
+              )}
             </span>
             <Image
               src="/images/Logo-stork.png"
