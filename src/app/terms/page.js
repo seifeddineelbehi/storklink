@@ -29,7 +29,7 @@ export default function Terms() {
           </h3>
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             This website is owned, controlled, and operated by StorkLink.
-            References to “we,” “us,” and “our” refer to StorkLink, and "you"
+            References to “we,” “us,” and “our” refer to StorkLink, and &quot;you&quot;
             refers to the person, company, or organization browsing or using the
             website. Information or materials submitted to this website are
             hosted and stored on servers in compliance with relevant data
@@ -108,7 +108,7 @@ export default function Terms() {
             4.1 You confirm that any material you submit or upload to the
             Website (&quot;Your Material&quot;) is legal, and respectful, complies with
             all applicable laws and regulations, does not infringe on any third
-            party's intellectual property rights, is not confidential or
+            party&apos;s intellectual property rights, is not confidential or
             proprietary, is not offensive, defamatory, or inappropriate, is free
             from harmful software like viruses, and is accurate and reliable.
             StorkLink reserves the right to remove Your Material if it violates
