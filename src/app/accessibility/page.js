@@ -73,7 +73,7 @@ export default function Talent() {
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             We have chosen font and background color combinations that
             significantly contrast to ensure clarity across different color
-            combinations. Users can override the site's colors by adjusting
+            combinations. Users can override the site&apos;s colors by adjusting
             their browser settings.
           </p>
 
@@ -96,7 +96,7 @@ export default function Talent() {
           <br />
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             All form fields follow a logical tab sequence for easy navigation.
-            Most fields include 'label' and 'id' attributes to explicitly
+            Most fields include &apos;label&apos; and &apos;id&apos; attributes to explicitly
             associate them with their labels, facilitating data entry.
             Additionally, mandatory fields are marked with an asterisk (*).
           </p>

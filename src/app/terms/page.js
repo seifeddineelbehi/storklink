@@ -10,7 +10,7 @@ const Footer = dynamic(() => import("../components/footer"));
 const ContactData = dynamic(() => import("../components/contact-data"));
 const TalentServices = dynamic(() => import("../components/talent-services"));
 
-export default function Terms() {
+export default function Terms() { 
   return (
     <>
       <section
@@ -45,20 +45,20 @@ export default function Terms() {
             2.1 These terms and conditions apply to all interactions between
             StorkLink and anyone who uses or accesses our website, including any
             materials, information, or services provided through it (hereinafter
-            referred to as the "Website").
+            referred to as the &quot;Website&quot;).
           </p>
           <br />
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             2.2 By using or accessing the Website, you agree to comply with
             these terms and conditions. If you do not agree, you must
-            discontinue the use of the Website.{" "}
+            discontinue the use of the Website.
           </p>
           <br />
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             2.3 StorkLink reserves the right to modify or discontinue any part
             of the Website at any time, as well as to update these terms and
             conditions. Continued use of the Website after any changes are made
-            constitutes your acceptance of the updated terms.{" "}
+            constitutes your acceptance of the updated terms.
           </p>
           <br />
           <br />
@@ -106,7 +106,7 @@ export default function Terms() {
           <br />
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             4.1 You confirm that any material you submit or upload to the
-            Website ("Your Material") is legal, and respectful, complies with
+            Website (&quot;Your Material&quot;) is legal, and respectful, complies with
             all applicable laws and regulations, does not infringe on any third
             party's intellectual property rights, is not confidential or
             proprietary, is not offensive, defamatory, or inappropriate, is free
