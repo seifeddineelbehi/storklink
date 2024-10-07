@@ -99,7 +99,7 @@ export default function OurServices({ title, desc }) {
 
                 </div>
                 <div className="mt-6">
-                  <h5 className="text-[color:var(--darkest-grey-color)] font- text-lg  hover:text-yellow-400 font-lexend">
+                  <h5 className="text-[color:var(--darkest-grey-color)] font- text-lg font-lexend">
                     {item.title}
                   </h5>
                   <p className="text-[color:var(--dark-grey-color)] mt-3">

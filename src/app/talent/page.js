@@ -2,6 +2,7 @@
 import React, { useState,useRef } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailJs from '@emailjs/browser'
 import { Alert } from "@material-tailwind/react";
 const Navbar = dynamic(() => import("../components/navbar-talent"));
@@ -13,14 +14,15 @@ const TalentServices = dynamic(()=>import('../components/talent-services'));
 export default function Talent() {
   const form = useRef();
   const [emailStatus, setEmailStatus] = useState('');
+  const [captcha, setCaptcha] = useState();
   const sendEmail = (e) => {
     e.preventDefault();  
-
-    emailJs
+    if(captcha){
+      emailJs
       .sendForm('service_0c1tir6', 'template_zsydxlw', form.current, {
         publicKey: 'nJLwlSQHPG_-JEQNX',
       })
-      .then(
+      .then( 
         () => {
           console.log('SUCCESS!');
           setEmailStatus('success');
@@ -37,6 +39,8 @@ export default function Talent() {
           console.log('FAILED...', error.text);
         },
       );
+    }
+    
   };
   const [selectedFile, setSelectedFile] = useState("No file chosen");
   return (
@@ -99,10 +103,10 @@ export default function Talent() {
                     <div className="grid grid-cols-1">
                       <div className="mb-5">
                         <label
-                          htmlFor="name"
+                          htmlFor="name" 
                           className="form-label font-medium"
                         >
-                          Full Name:
+                          Full Name <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="name"
@@ -117,7 +121,7 @@ export default function Talent() {
                           htmlFor="email"
                           className="form-label font-medium"
                         >
-                          Your Email:
+                          Your Email <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="user_email"
@@ -132,7 +136,7 @@ export default function Talent() {
                           htmlFor="phone"
                           className="form-label font-medium"
                         >
-                          Phone Number:
+                          Phone Number <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="phone"
@@ -147,33 +151,11 @@ export default function Talent() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Current Location (City, Country):
+                          Current Location (City, Country) <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="location"
                           id="location"
-                          className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
-                          placeholder=""
-                        />
-                      </div>
-                    </div>
-                    <br />
-
-                    <h3 className="mb-6 text-2xl leading-normal font-medium font-lexend">
-                      Professional Background:
-                    </h3>
-                    <br />
-                    <div className="grid grid-cols-1">
-                      <div className="mb-5">
-                        <label
-                          htmlFor="job-title"
-                          className="form-label font-medium"
-                        >
-                          Current Job Title:
-                        </label>
-                        <input  required={true}
-                          name="job-title"
-                          id="job-title"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
                           placeholder=""
                         />
@@ -184,7 +166,7 @@ export default function Talent() {
                           htmlFor="industry-field"
                           className="form-label font-medium"
                         >
-                          Industry/Field:
+                          Industry/Field <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="industry-field"
@@ -199,7 +181,7 @@ export default function Talent() {
                           htmlFor="experience-years"
                           className="form-label font-medium"
                         >
-                          Years of Experience:
+                          Years of Experience <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="experience-years"
@@ -208,23 +190,7 @@ export default function Talent() {
                           placeholder=""
                         />
                       </div>
-                      <br />
-                      <div className="mb-5">
-                        <label
-                          htmlFor="skills-certifications"
-                          className="form-label font-medium"
-                        >
-                          Key Skills/Certifications:
-                        </label>
-                        <input  required={true}
-                          name="skills-certifications"
-                          id="skills-certifications"
-                          className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
-                          placeholder=""
-                        />
-                      </div>
                     </div>
-
                     <br />
 
                     <h3 className="mb-6 text-2xl leading-normal font-medium font-lexend">
@@ -239,7 +205,7 @@ export default function Talent() {
                         >
                           Desired Role in Germany:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="desired-role"
                           id="desired-role"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -254,7 +220,7 @@ export default function Talent() {
                         >
                           Preferred Location(s) in Germany:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="pref-location"
                           id="pref-location"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -451,7 +417,7 @@ export default function Talent() {
                         >
                           Other Languages Spoken:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="lang-spoken"
                           id="lang-spoken"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -484,7 +450,7 @@ export default function Talent() {
                     </div>
                     <br />
                     <div className="grid grid-cols-1">
-                      <div className="mb-5">
+                      <div className="mb-5"> 
                         <label
                           htmlFor="desired-role"
                           className="form-label font-medium"
@@ -516,6 +482,8 @@ export default function Talent() {
                         </div>
                       </div>
                     </div>
+                    <br />
+                    <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setCaptcha}></ReCAPTCHA>
                     <br />
                     <br />
                     <button

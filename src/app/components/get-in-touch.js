@@ -4,13 +4,15 @@ import Link from 'next/link';
 import * as Unicons from '@iconscout/react-unicons';
 import emailJs from '@emailjs/browser'
 import { Alert } from "@material-tailwind/react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function GetInTouch() {
     const form = useRef();
     const [emailStatus, setEmailStatus] = useState('');
+    const [captcha, setCaptcha] = useState();
   const sendEmail = (e) => {
     e.preventDefault();
-
+    if(captcha){
     emailJs
       .sendForm('service_0c1tir6', 'template_d0r0x8c', form.current, {
         publicKey: 'nJLwlSQHPG_-JEQNX',
@@ -31,7 +33,7 @@ export default function GetInTouch() {
               }, 2000);
           console.log('FAILED...', error.text);
         },
-      );
+      );}
   };
     return (
         <>
@@ -75,6 +77,9 @@ export default function GetInTouch() {
                                                 placeholder="Message :"></textarea>
                                         </div>
                                     </div>
+                                    <br />
+                                    <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setCaptcha}></ReCAPTCHA>
+                                    <br />
                                     <button type="submit" id="submit" name="send"
                                         className="py-2 px-5 inline-block font-normal tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)]rounded-md">Send
                                         Message</button>
@@ -84,6 +89,18 @@ export default function GetInTouch() {
 
                         <div className="lg:col-span-4">
                             <div className="lg:ms-8">
+                            <div className="flex">
+                                    <div className="icons text-center mx-auto">
+                                        <Unicons.UilHome className=" block rounded text-2xl dark:text-white mb-0"/>
+                                    </div>
+
+                                    <div className="flex-1 ms-6">
+                                        <h5 className="text-lg dark:text-white mb-2 font-medium">Address</h5>
+                                         <p className="text-slate-400">Rümelinstr. 28 70191 Stuttgart
+                                         </p>
+                                    </div>
+                                </div>
+                                <br/>
                                 <div className="flex">
                                     <div className="icons text-center mx-auto">
                                         <Unicons.UilPhone className=" block rounded text-2xl dark:text-white mb-0"/>
@@ -91,7 +108,7 @@ export default function GetInTouch() {
 
                                     <div className="flex-1 ms-6">
                                         <h5 className="text-lg dark:text-white mb-2 font-medium">Phone</h5>
-                                         <Link href="tel:+152534-468-854" className="text-slate-400">+123 456 7890</Link>
+                                         <p className="text-slate-400">+49 178 759 5846623</p>
                                     </div>
                                 </div>
 
@@ -100,9 +117,9 @@ export default function GetInTouch() {
                                         <Unicons.UilEnvelope className=" block rounded text-2xl dark:text-white mb-0"/>
                                     </div>
 
-                                    <div className="flex-1 ms-6">
+                                    <div className="flex-1 ms-6"> 
                                         <h5 className="text-lg dark:text-white mb-2 font-medium">Email</h5>
-                                         <Link href="mailto:contact@example.com" className="text-slate-400">info@storklink.com</Link>
+                                         <p className="text-slate-400">Info@StorkLink.de</p>
                                     </div>
                                 </div>
                             </div>

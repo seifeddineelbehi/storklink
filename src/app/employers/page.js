@@ -3,6 +3,7 @@ import React, { useState,useRef } from "react";
 import dynamic from "next/dynamic";
 import { Alert } from "@material-tailwind/react";
 import Image from "next/image";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailJs from '@emailjs/browser'
 const Navbar = dynamic(() => import("../components/navbar-employers"));
 const Switcher = dynamic(() => import("../components/Switcher"));
@@ -13,9 +14,10 @@ const EmployersServices = dynamic(()=>import('../components/employers-services')
 export default function Employers() {
   const form = useRef();
   const [emailStatus, setEmailStatus] = useState('');
+  const [captcha, setCaptcha] = useState();
   const sendEmail = (e) => {
     e.preventDefault(); 
-
+    if(captcha){
     emailJs
       .sendForm('service_0c1tir6', 'template_zsydxlw', form.current, {
         publicKey: 'nJLwlSQHPG_-JEQNX',
@@ -36,7 +38,7 @@ export default function Employers() {
               }, 2000);
           console.log('FAILED...', error.text);
         },
-      );
+      );}
   };
   const [selectedFile, setSelectedFile] = useState("No file chosen");
   return (
@@ -100,7 +102,7 @@ export default function Employers() {
                           htmlFor="name"
                           className="form-label font-medium"
                         >
-                          Company Name:
+                          Company Name <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="name"
@@ -115,7 +117,7 @@ export default function Employers() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Industry/Field:
+                          Industry/Field <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="industry"
@@ -130,7 +132,7 @@ export default function Employers() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Contact Person:
+                          Contact Person <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="contact"
@@ -145,7 +147,7 @@ export default function Employers() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Job Title:
+                          Job Title <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="job-title"
@@ -160,7 +162,7 @@ export default function Employers() {
                           htmlFor="email"
                           className="form-label font-medium"
                         >
-                          Your Email:
+                          Email Address <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="email"
@@ -175,7 +177,7 @@ export default function Employers() {
                           htmlFor="phone"
                           className="form-label font-medium"
                         >
-                          Phone Number:
+                          Phone Number <span style={{ color: 'red' }}>(*)</span>:
                         </label>
                         <input  required={true}
                           name="phone"
@@ -192,7 +194,7 @@ export default function Employers() {
                         >
                           Company Website:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="website"
                           id="website"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -214,7 +216,7 @@ export default function Employers() {
                         >
                           Job Title:
                         </label>
-                        <input  required={true}
+                        <input  
                           name="job-title"
                           id="job-title"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -229,7 +231,7 @@ export default function Employers() {
                         >
                           Department:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="department"
                           id="department"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -303,7 +305,7 @@ export default function Employers() {
                         >
                           Key Responsibilities:
                         </label>
-                        <input  required={true}
+                        <input  
                           name="key-resp"
                           id="key-resp"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -318,7 +320,7 @@ export default function Employers() {
                         >
                           Required Skills and Qualifications:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="skills-qualifications"
                           id="skills-qualifications"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -333,7 +335,7 @@ export default function Employers() {
                         >
                           Preferred Experience Level:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="pref-exp-lvl"
                           id="pref-exp-lvl"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -356,7 +358,7 @@ export default function Employers() {
                         >
                           Desired Location(s) in Germany:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="desired-role"
                           id="desired-role"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -372,7 +374,7 @@ export default function Employers() {
                         >
                           Special Requirements or Preferences:
                         </label>
-                        <input  required={true}
+                        <input 
                           name="special-req"
                           id="special-req"
                           className="form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
@@ -380,78 +382,9 @@ export default function Employers() {
                         />
                       </div>
                     </div>
+                    
                     <br />
-                    <h3 className="mb-6 text-2xl leading-normal font-medium font-lexend">
-                      Additional Information:
-                    </h3>
-                    <br />
-                    <div className="grid grid-cols-1">
-                      <div className="mb-5">
-                        <label
-                          htmlFor="desired-role"
-                          className="form-label font-medium"
-                        >
-                          Brief Description of Your Company:
-                        </label>
-                        <textarea
-                          name="brief-desc"
-                          id="brief-desc"
-                          className="h-28 form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
-                          placeholder=""
-                        />
-                      </div>
-                    </div>
-                    <br />
-                    <div className="grid grid-cols-1">
-                      <div className="mb-5">
-                        <label
-                          htmlFor="desired-role"
-                          className="form-label font-medium"
-                        >
-                          What makes your company an attractive place to work?:
-                        </label>
-                        <textarea
-                          name="comp-att"
-                          id="comp-att"
-                          className="h-28 form-input w-full py-2 px-3 h-10 bg-transparent border border-inherit dark:border-gray-800 dark:bg-slate-900 dark:text-slate-200 rounded outline-none focus:border-violet-600/50 dark:focus:border-violet-600/50 focus:ring-0 mt-2"
-                          placeholder=""
-                        />
-                      </div>
-                    </div>
-                    <br />
-                    <div className="grid grid-cols-1">
-                      <div className="mb-5">
-                        <label
-                          htmlFor="desired-role"
-                          className="form-label font-medium"
-                        >
-                          Upload Job Description (PDF, DOC, max 5MB):
-                        </label>
-                        <div class="flex flex-row items-center">
-                          <input
-                            type="file"
-                            id="custom-input"
-                            onChange={(e) => {
-                              if (e.target.files.length > 0) {
-                                setSelectedFile(e.target.files[0].name);
-                              }
-                            }}
-                            hidden
-                          />
-                          <label
-                            for="custom-input"
-                            class="block text-sm  mr-4 py-2 px-4
-            rounded-md border-0 font-semibold bg-[color:var(--main-color)]
-            hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] cursor-pointer"
-                          >
-                            Choose file
-                          </label>
-                          <label class="text-sm text-slate-500">
-                            {selectedFile}
-                          </label>
-                        </div>
-                      </div>
-                    </div>
+                    <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={setCaptcha}></ReCAPTCHA>
                     <br />
                     <br />
                     <button

@@ -146,6 +146,39 @@ export default function Navbar(props) {
               </li>
             </ul>
           </div>
+          <div
+            className={`${
+              isOpen === true
+                ? "navigation lg_992:order-1 lg_992:flex hidden ms-auto"
+                : "navigation lg_992:order-1 lg_992:flex block ms-auto"
+            }`}
+            id="menu-collapse"
+          >
+            <ul
+              className="navbar-nav nav-light flex  align-right "
+              id="navbar-navlist"
+              style={{
+                overflow: isOpen === true ? "visible" : "hidden",
+              }} 
+            >
+              <li className={`nav-item`}>
+                <div
+                
+                  className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--dark-grey-color55565B)]  text-[color:var(--dark-grey-color)] border-[color:var(--dark-grey-color55565B)] rounded-l-full rounded-r-none  font-normal inline-flex items-center gap-1"
+                >
+                  Employers
+                </div> 
+              </li>
+              <li className={`nav-item`}>
+                <Link
+                  href="/talent"
+                  className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] rounded-r-full rounded-l-none  font-normal inline-flex items-center gap-1"
+                >
+                  Talents
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </>

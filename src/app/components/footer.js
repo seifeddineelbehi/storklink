@@ -23,9 +23,7 @@ export default function Footer() {
                       height={74}
                     />
                     <p className="max-w-xl mx-auto text-slate-400 mt-8">
-                      Launch your campaign and benefit from our expertise on
-                      designing and managing conversion centered Tailwind CSS
-                      html page.
+                    Your partner in navigating global career opportunities
                     </p>
                   </div>
 
@@ -50,6 +48,39 @@ export default function Footer() {
                     </li>
                 
                   </ul>
+                  <ul className="list-none footer-list text-center mt-8">
+                    <li className="inline px-2">
+                      {" "}
+                      <Link
+                        href="/terms"
+                        target="_blank"
+                        className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"
+                      >
+                        Terms & Conditions
+                      </Link>
+                    </li>
+                    <li className="inline px-2 mt-[10px]">
+                      {" "}
+                      <Link
+                        href="/accessibility"
+                        target="_blank"
+                        className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out ms-2"
+                      >
+                        Accessibility  
+                      </Link>
+                    </li>
+                    <li className="inline px-2 mt-[10px]">
+                      {" "}
+                      <Link
+                        href="/privacy"
+                        target="_blank"
+                        className="text-gray-300 hover:text-gray-400 duration-500 ease-in-out ms-2"
+                      >
+                        Privacy Policy 
+                      </Link>
+                    </li>
+                
+                  </ul>
                 </div>
               </div>
             </div>
@@ -58,25 +89,10 @@ export default function Footer() {
 
         <div className="py-[30px] px-0 border-t border-slate-800">
           <div className="container text-center">
-            <div className="grid md:grid-cols-12 items-center">
-              <div className="md:col-span-6">
-                <div className="md:text-start text-center">
-                  <p className="text-gray-400">
-                    ©{new Date().getFullYear()} Ovaxo. Design & Develop with{" "}
-                    <i className="mdi mdi-heart text-red-700"></i> by{" "}
-                    <Link
-                      href="https://shreethemes.in/"
-                      target="_blank"
-                      className="text-reset"
-                    >
-                      Shreethemes
-                    </Link>
-                    .
-                  </p>
-                </div>
-              </div>
+            <div className="grid md:grid-cols-11 items-center">
+             
 
-              <div className="md:col-span-6 md:mt-0 mt-8">
+              <div className="md:col-span-6 md:mt-0 mt-6">
                 <ul className="list-none md:text-end text-center">
                   <li className="inline ms-1">
                     {" "}

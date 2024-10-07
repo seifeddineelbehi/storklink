@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import CookiesConsent from './components/cookies_consent'
 const NavbarSmallLight = dynamic(() =>
   import("./components/navbar-small-light")
 );
@@ -45,12 +45,12 @@ export default function Index() {
               Soar to New Heights
             </h3>
             <p className="text-slate-200 font-normal text-2xl max-w-6xl mx-auto">
-              At StorkLink, we connect Tunisian talent with professional
-              opportunities in Germany, understanding the unique needs of our
-              clients, candidates, and partners. Every detail matters, and we
-              continuously refine our approach to exceed expectations. Trust and
-              respect form the foundation of our relationships, just like the
-              stork’s commitment to its community.
+            At StorkLink, we connect global talent with professional opportunities 
+            in Germany, understanding the unique needs of our clients, candidates, 
+            and partners. Every detail matters, and we continuously refine our 
+            approach to exceed expectations. Trust and respect form the foundation 
+            of our relationships, just like the stork’s commitment to its community.
+
             </p>
           </div>
         </div>
@@ -108,6 +108,7 @@ export default function Index() {
             <BlogsNews title="Blogs or News" desc="Launch your campaign and benefit from our expertise on designing and managing conversion centered Tailwind CSS html page."/>
  */}{" "}
       <GetInTouch />
+      <CookiesConsent />
       <Footer />
       <Switcher />
     </>
