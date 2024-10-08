@@ -106,7 +106,7 @@ export default function Talent() {
                           htmlFor="name" 
                           className="form-label font-medium"
                         >
-                          Full Name <span style={{ color: 'red' }}>(*)</span>:
+                          Full Name <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="name"
@@ -121,7 +121,7 @@ export default function Talent() {
                           htmlFor="email"
                           className="form-label font-medium"
                         >
-                          Your Email <span style={{ color: 'red' }}>(*)</span>:
+                          Your Email <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="user_email"
@@ -136,7 +136,7 @@ export default function Talent() {
                           htmlFor="phone"
                           className="form-label font-medium"
                         >
-                          Phone Number <span style={{ color: 'red' }}>(*)</span>:
+                          Phone Number <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="phone"
@@ -151,7 +151,7 @@ export default function Talent() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Current Location (City, Country) <span style={{ color: 'red' }}>(*)</span>:
+                          Current Location (City, Country) <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="location"
@@ -166,7 +166,7 @@ export default function Talent() {
                           htmlFor="industry-field"
                           className="form-label font-medium"
                         >
-                          Industry/Field <span style={{ color: 'red' }}>(*)</span>:
+                          Industry/Field <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="industry-field"
@@ -181,7 +181,7 @@ export default function Talent() {
                           htmlFor="experience-years"
                           className="form-label font-medium"
                         >
-                          Years of Experience <span style={{ color: 'red' }}>(*)</span>:
+                          Years of Experience <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="experience-years"

@@ -102,7 +102,7 @@ export default function Employers() {
                           htmlFor="name"
                           className="form-label font-medium"
                         >
-                          Company Name <span style={{ color: 'red' }}>(*)</span>:
+                          Company Name <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="name"
@@ -117,7 +117,7 @@ export default function Employers() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Industry/Field <span style={{ color: 'red' }}>(*)</span>:
+                          Industry/Field <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="industry"
@@ -132,7 +132,7 @@ export default function Employers() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Contact Person <span style={{ color: 'red' }}>(*)</span>:
+                          Contact Person <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="contact"
@@ -147,7 +147,7 @@ export default function Employers() {
                           htmlFor="location"
                           className="form-label font-medium"
                         >
-                          Job Title <span style={{ color: 'red' }}>(*)</span>:
+                          Job Title <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="job-title"
@@ -162,7 +162,7 @@ export default function Employers() {
                           htmlFor="email"
                           className="form-label font-medium"
                         >
-                          Email Address <span style={{ color: 'red' }}>(*)</span>:
+                          Email Address <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="email"
@@ -177,7 +177,7 @@ export default function Employers() {
                           htmlFor="phone"
                           className="form-label font-medium"
                         >
-                          Phone Number <span style={{ color: 'red' }}>(*)</span>:
+                          Phone Number <span style={{ color: 'red' }}>*</span>:
                         </label>
                         <input  required={true}
                           name="phone"

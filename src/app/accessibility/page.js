@@ -98,7 +98,7 @@ export default function Talent() {
             All form fields follow a logical tab sequence for easy navigation.
             Most fields include &apos;label&apos; and &apos;id&apos; attributes to explicitly
             associate them with their labels, facilitating data entry.
-            Additionally, mandatory fields are marked with an asterisk (*).
+            Additionally, mandatory fields are marked with an asterisk *.
           </p>
 
           <br />
