@@ -4,11 +4,11 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import emailJs from "@emailjs/browser";
 import { Alert } from "@material-tailwind/react";
-const Navbar = dynamic(() => import("../components/navbar-talent"));
-const Switcher = dynamic(() => import("../components/Switcher"));
-const Footer = dynamic(() => import("../components/footer"));
-const ContactData = dynamic(() => import("../components/contact-data"));
-const TalentServices = dynamic(() => import("../components/talent-services"));
+const Navbar = dynamic(() => import("../../components/navbar-talent"));
+const Switcher = dynamic(() => import("../../components/Switcher"));
+const Footer = dynamic(() => import("../../components/footer"));
+const ContactData = dynamic(() => import("../../components/contact-data"));
+const TalentServices = dynamic(() => import("../../components/talent-services"));
 
 export default function Talent() {
   return (
@@ -237,7 +237,7 @@ export default function Talent() {
           <h3 className="text-[color:var(--darkest-grey-color)] mb-4 md:text-4xl text-3xl font-bold font-lexend">
             How Long Do We Keep Your Personal Data?
           </h3>
-          <br />
+          <br /> 
           <p className="text-[color:var(--dark-grey-color)] md:text-xl text-xl">
             We retain your personal data only as long as necessary to fulfill
             the purposes outlined in this privacy policy, comply with legal

@@ -1,27 +1,31 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import CookiesConsent from './components/cookies_consent'
+import CookiesConsent from "../components/cookies_consent";
 const NavbarSmallLight = dynamic(() =>
-  import("./components/navbar-small-light")
+  import("../components/navbar-small-light")
 );
-const Switcher = dynamic(() => import("./components/Switcher"));
-const Footer = dynamic(() => import("./components/footer"));
-const About = dynamic(() => import("./components/about"));
-const OurServices = dynamic(() => import("./components/our-services"));
+const Switcher = dynamic(() => import("../components/Switcher"));
+const Footer = dynamic(() => import("../components/footer"));
+const About = dynamic(() => import("../components/about"));
+const OurServices = dynamic(() => import("../components/our-services"));
 
-const GetInTouch = dynamic(() => import("./components/get-in-touch"));
+const GetInTouch = dynamic(() => import("../components/get-in-touch"));
 
 import * as Unicons from "@iconscout/react-unicons";
 
 import ModalVideo from "react-modal-video";
-import "../../node_modules/react-modal-video/css/modal-video.css";
-
+import { useIsVisible } from "../components/use_is_visible";
+import { useTranslations } from "next-intl";
 export default function Index() {
+  
+  const isVisible = useRef();
+  const isVisible1 = useIsVisible(isVisible);
   const [isOpen, setOpen] = useState(false);
-
+  const t=useTranslations('testIndex'); 
+  console.log(t('title'))
   return (
     <>
       <NavbarSmallLight />
@@ -39,18 +43,25 @@ export default function Index() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t to-slate-950/50 via-slate-950/75 from-slate-950"></div>
-        <div className="container relative z-10">
+        <div
+          ref={isVisible}
+          className={`container relative z-10 ${
+            isVisible1 
+              ? "animate-fade animate-once animate-duration-1000 animate-ease-in"
+              : "opacity-0"
+          }`}
+        >
           <div className="grid grid-cols-1 pb-8 text-center mt-10">
             <h3 className="font-normal leading-normal text-4xl mb-5 mt-10 text-white">
               Soar to New Heights
             </h3>
             <p className="text-slate-200 font-normal text-2xl max-w-6xl mx-auto">
-            At StorkLink, we connect global talent with professional opportunities 
-            in Germany, understanding the unique needs of our clients, candidates, 
-            and partners. Every detail matters, and we continuously refine our 
-            approach to exceed expectations. Trust and respect form the foundation 
-            of our relationships, just like the stork’s commitment to its community.
-
+              At StorkLink, we connect global talent with professional
+              opportunities in Germany, understanding the unique needs of our
+              clients, candidates, and partners. Every detail matters, and we
+              continuously refine our approach to exceed expectations. Trust and
+              respect form the foundation of our relationships, just like the
+              stork’s commitment to its community.
             </p>
           </div>
         </div>

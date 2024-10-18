@@ -4,12 +4,12 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import emailJs from "@emailjs/browser";
 import { Alert } from "@material-tailwind/react";
-const Navbar = dynamic(() => import("../components/navbar-talent"));
-const Switcher = dynamic(() => import("../components/Switcher"));
-const Footer = dynamic(() => import("../components/footer"));
-const ContactData = dynamic(() => import("../components/contact-data"));
-const TalentServices = dynamic(() => import("../components/talent-services"));
-
+const Navbar = dynamic(() => import("../../components/navbar-talent"));
+const Switcher = dynamic(() => import("../../components/Switcher"));
+const Footer = dynamic(() => import("../../components/footer"));
+const ContactData = dynamic(() => import("../../components/contact-data"));
+const TalentServices = dynamic(() => import("../../components/talent-services"));
+ 
 export default function Terms() { 
   return (
     <>

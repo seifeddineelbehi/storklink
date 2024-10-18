@@ -186,6 +186,7 @@ export default function NavbarSmallLight() {
               <li className={`nav-item`}>
                 <Link
                   href="/talent"
+                  
                   className="justify-center py-2 px-5 w-[120px]  tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-[color:var(--main-color)] hover:bg-[color:var(--main-color-hover)] border-[color:var(--main-color)] hover:border-[color:var(--main-color-hover)] text-[color:var(--dark-grey-color)] rounded-r-full rounded-l-none  font-normal inline-flex items-center gap-1"
                 >
                   Talents

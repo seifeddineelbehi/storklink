@@ -4,12 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-const Navbar = dynamic(()=>import('../components/navbar'));
-const Switcher = dynamic(()=>import('../components/Switcher'));
-const Footer = dynamic(()=>import('../components/footer'));
+const Navbar = dynamic(()=>import('../../components/navbar'));
+const Switcher = dynamic(()=>import('../../components/Switcher'));
+const Footer = dynamic(()=>import('../../components/footer'));
 import { Facebook, Instagram, Linkedin } from 'react-feather';
-
-import { MeetOursdata } from '../Data/data';
+ 
+import { MeetOursdata } from '../../Data/data';
 import * as Unicons from '@iconscout/react-unicons';
 
 export default function Team() {

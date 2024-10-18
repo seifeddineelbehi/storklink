@@ -4,11 +4,11 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import emailJs from "@emailjs/browser";
 import { Alert } from "@material-tailwind/react";
-const Navbar = dynamic(() => import("../components/navbar-talent"));
-const Switcher = dynamic(() => import("../components/Switcher"));
-const Footer = dynamic(() => import("../components/footer"));
-const ContactData = dynamic(() => import("../components/contact-data"));
-const TalentServices = dynamic(() => import("../components/talent-services"));
+const Navbar = dynamic(() => import("../../components/navbar-talent"));
+const Switcher = dynamic(() => import("../../components/Switcher"));
+const Footer = dynamic(() => import("../../components/footer"));
+const ContactData = dynamic(() => import("../../components/contact-data"));
+const TalentServices = dynamic(() => import("../../components/talent-services"));
 
 export default function Talent() {
   return (
@@ -88,7 +88,7 @@ export default function Talent() {
             size through their browser settings according to their preferences.
           </p>
 
-          <br />
+          <br /> 
           <br />
           <h3 className="text-[color:var(--darkest-grey-color)] mb-4 md:text-4xl text-3xl font-medium font-lexend">
             Forms and Fields

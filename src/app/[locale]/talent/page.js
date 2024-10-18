@@ -5,14 +5,19 @@ import Image from "next/image";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailJs from '@emailjs/browser'
 import { Alert } from "@material-tailwind/react";
-const Navbar = dynamic(() => import("../components/navbar-talent"));
-const Switcher = dynamic(() => import("../components/Switcher"));
-const Footer = dynamic(() => import("../components/footer"));
-const ContactData = dynamic(() => import("../components/contact-data"));
-const TalentServices = dynamic(()=>import('../components/talent-services'));
+import { useIsVisible } from "../../components/use_is_visible";
+const Navbar = dynamic(() => import("../../components/navbar-talent"));
+const Switcher = dynamic(() => import("../../components/Switcher"));
+const Footer = dynamic(() => import("../../components/footer"));
+const ContactData = dynamic(() => import("../../components/contact-data"));
+const TalentServices = dynamic(()=>import('../../components/talent-services'));
 
 export default function Talent() {
   const form = useRef();
+  const isVisible = useRef();
+  const isVisible1 = useIsVisible(isVisible);
+  const isHeaderVisible2 = useRef();
+  const isVisible2 = useIsVisible(isHeaderVisible2);
   const [emailStatus, setEmailStatus] = useState('');
   const [captcha, setCaptcha] = useState();
   const sendEmail = (e) => {
@@ -54,7 +59,12 @@ export default function Talent() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t to-slate-950/50 via-slate-950/75 from-slate-950"></div>
-        <div className="container">
+        <div ref={isHeaderVisible2}  
+      className={`container ${ 
+        isVisible2
+          ? "animate-fade animate-once animate-duration-1000 animate-ease-in"
+          : "opacity-0"
+      }`}>
           <div className="grid grid-cols-1 pb-8 text-center mt-10">
             <h3 className="font-medium leading-normal text-4xl mb-5 mt-10 text-white font-lexend">
               Rise with Purpose and Precision
@@ -71,7 +81,13 @@ export default function Talent() {
       </section>
       <TalentServices/>
 
-      <section className="relative lg:py-24 py-16 " id="get-in-touch-talent">
+      <section
+      ref={isVisible}  
+      className={`relative lg:py-24 py-16 ${
+        isVisible1 
+          ? "animate-fade-up animate-once animate-duration-5000 animate-ease-in"
+          : "opacity-0"
+      }`} id="get-in-touch-talent">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="text-[color:var(--darkest-grey-color)] mb-4 md:text-5xl text-4xl font-medium font-lexend">
             Get in Touch with StorkLink

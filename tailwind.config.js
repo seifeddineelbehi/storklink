@@ -80,7 +80,8 @@ module.exports = {
   },
 
   plugins: [
-    require('autoprefixer')
+    require('autoprefixer'),
+    require('tailwindcss-animated')
   ]
 
 }

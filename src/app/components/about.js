@@ -1,11 +1,23 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { useIsVisible } from "./use_is_visible";
 import * as Unicons from "@iconscout/react-unicons";
-
+import dynamic from "next/dynamic";
 export default function About({ title, desc }) {
+  const storyBigScreenRef = useRef();
+  const isVisible1 = useIsVisible(storyBigScreenRef);
+  const missionBigScreenRef = useRef();
+  const isVisible2 = useIsVisible(missionBigScreenRef);
+  const visionBigScreenRef = useRef();
+  const isVisible3 = useIsVisible(visionBigScreenRef);
+  const approachBigScreenRef = useRef();
+  const isVisible4 = useIsVisible(approachBigScreenRef);
+
+
+
+
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -41,7 +53,14 @@ export default function About({ title, desc }) {
             <br />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-5">
+              <div
+                ref={storyBigScreenRef}
+                className={`lg:col-span-5 ${
+                  isVisible1
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}
+              >
                 <div className="relative">
                   <img
                     src="/images/our story.jpg"
@@ -55,7 +74,11 @@ export default function About({ title, desc }) {
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
               </div>
-              <div className="lg:col-span-7">
+              <div ref={storyBigScreenRef} className={`lg:col-span-7 ${
+                  isVisible1
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 md:text-2xl text-[color:var(--darkest-grey-color)] text-xl font-medium font-lexend">
                     Our story
@@ -65,8 +88,8 @@ export default function About({ title, desc }) {
                   </h4>
                   <p className="text-[color:var(--dark-grey-color)]  dark:text-slate-300 max-w-2xl font-inter mx-auto">
                     StorkLink’s journey is rooted in a deeply personal and
-                    transformative experience. Our founder, having navigated
-                    the complexities of relocating to Germany, faced numerous
+                    transformative experience. Our founder, having navigated the
+                    complexities of relocating to Germany, faced numerous
                     challenges along the way. Alongside her co-founder, who
                     brought extensive knowledge of the local job market and
                     hiring dynamics, they frequently advised others encountering
@@ -90,7 +113,11 @@ export default function About({ title, desc }) {
             <br />
             <br />
             <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-7">
+              <div ref={missionBigScreenRef} className={`lg:col-span-7 ${
+                  isVisible2
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 md:text-2xl text-[color:var(--darkest-grey-color)] text-xl font-medium font-lexend">
                     Our Mission
@@ -106,7 +133,12 @@ export default function About({ title, desc }) {
                   </p>
                 </div>
               </div>
-              <div className="lg:col-span-5">
+              <div ref={missionBigScreenRef}
+                className={`lg:col-span-5 ${
+                  isVisible2
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our mission.jpg"
@@ -128,7 +160,12 @@ export default function About({ title, desc }) {
             <br />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-5">
+              <div ref={visionBigScreenRef}
+                className={`lg:col-span-5 ${
+                  isVisible3
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our vision.jpg"
@@ -142,7 +179,11 @@ export default function About({ title, desc }) {
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
               </div>
-              <div className="lg:col-span-7">
+              <div className={`lg:col-span-7 ${ 
+                  isVisible3
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 text-[color:var(--darkest-grey-color)] md:text-2xl text-xl font-medium font-lexend">
                     Our Vision
@@ -172,7 +213,11 @@ export default function About({ title, desc }) {
             <br />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-7">
+              <div ref={approachBigScreenRef} className={`lg:col-span-7 ${
+                  isVisible4
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 md:text-2xl text-[color:var(--darkest-grey-color)] text-xl font-medium font-lexend">
                     Our Approach and Values
@@ -247,7 +292,12 @@ export default function About({ title, desc }) {
                 </div>
               </div>
 
-              <div className="lg:col-span-5">
+              <div ref={approachBigScreenRef}
+                className={`lg:col-span-5 ${
+                  isVisible4
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our values.jpg"
@@ -278,10 +328,15 @@ export default function About({ title, desc }) {
               ""
             )}
             <br />
-            <br />
+            <br /> 
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-5">
+            <div ref={storyBigScreenRef} className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center bg-white">
+              <div 
+                className={`lg:col-span-5 ${
+                  isVisible1
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our story.jpg"
@@ -295,7 +350,12 @@ export default function About({ title, desc }) {
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
               </div>
-              <div className="lg:col-span-7">
+              <div 
+                 className={`lg:col-span-7 ${
+                  isVisible1
+                  ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                  : "opacity-0"
+              }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 md:text-2xl text-[color:var(--darkest-grey-color)] text-xl font-medium font-lexend">
                     Our story
@@ -305,8 +365,8 @@ export default function About({ title, desc }) {
                   </h4>
                   <p className="text-[color:var(--dark-grey-color)]  dark:text-slate-300 max-w-2xl font-inter mx-auto">
                     StorkLink’s journey is rooted in a deeply personal and
-                    transformative experience. Our founder, having navigated
-                    the complexities of relocating to Germany, faced numerous
+                    transformative experience. Our founder, having navigated the
+                    complexities of relocating to Germany, faced numerous
                     challenges along the way. Alongside her co-founder, who
                     brought extensive knowledge of the local job market and
                     hiring dynamics, they frequently advised others encountering
@@ -329,8 +389,13 @@ export default function About({ title, desc }) {
             <br />
             <br />
             <br />
-            <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-5">
+            <div ref={missionBigScreenRef} className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
+              <div 
+                className={`lg:col-span-5 ${
+                  isVisible2
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our mission.jpg"
@@ -344,7 +409,12 @@ export default function About({ title, desc }) {
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
               </div>
-              <div className="lg:col-span-7">
+              <div
+                 className={`lg:col-span-7 ${
+                  isVisible2
+                  ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                  : "opacity-0"
+              }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 md:text-2xl text-[color:var(--darkest-grey-color)] text-xl font-medium font-lexend">
                     Our Mission
@@ -367,8 +437,13 @@ export default function About({ title, desc }) {
             <br />
             <br />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-5">
+            <div ref={visionBigScreenRef} className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
+              <div
+                className={`lg:col-span-5 ${
+                  isVisible3
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our vision.jpg"
@@ -382,7 +457,12 @@ export default function About({ title, desc }) {
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
               </div>
-              <div className="lg:col-span-7">
+              <div
+                 className={`lg:col-span-7 ${
+                isVisible3
+                  ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
+                  : "opacity-0"
+              }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 text-[color:var(--darkest-grey-color)] md:text-2xl text-xl font-medium font-lexend">
                     Our Vision
@@ -411,8 +491,13 @@ export default function About({ title, desc }) {
             <br />
             <br />
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
-              <div className="lg:col-span-5">
+            <div ref={approachBigScreenRef} className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
+              <div
+                className={`lg:col-span-5 ${
+                  isVisible4
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0"
+                }`}>
                 <div className="relative">
                   <img
                     src="/images/our values.jpg"
@@ -425,8 +510,13 @@ export default function About({ title, desc }) {
                   />
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
-              </div>
-              <div className="lg:col-span-7">
+              </div>   
+              <div 
+              className={`lg:col-span-7 ${
+                isVisible4
+                  ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                  : "opacity-0"
+              }`}>
                 <div className="lg:ms-7">
                   <h3 className="mb-4 md:text-2xl text-[color:var(--darkest-grey-color)] text-xl font-medium font-lexend">
                     Our Approach and Values
