@@ -26,10 +26,10 @@ export const metadata = {
 export default async function LocaleLayout({ children , params:{locale}}) {
    
   const messages = await getMessages();
-  return ( 
+  return (  
     <html lang={locale} dir="LTR">
       <body  className={`${inter.variable} ${lexend.variable} font-inter text-base text-slate-950 dark:text-white dark:bg-slate-900`}>
-        <NextIntlClientProvider messages= {messages}>
+        <NextIntlClientProvider local={locale} messages= {messages}>
           {children} 
         </NextIntlClientProvider>
       </body>
