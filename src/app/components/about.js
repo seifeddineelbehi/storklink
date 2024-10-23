@@ -14,19 +14,29 @@ export default function About({ title, desc }) {
   const isVisible3 = useIsVisible(visionBigScreenRef);
   const approachBigScreenRef = useRef();
   const isVisible4 = useIsVisible(approachBigScreenRef);
+  const storySmallScreenRef = useRef();
+  const isVisible5 = useIsVisible(storySmallScreenRef);
+  const missionSmallScreenRef = useRef();
+  const isVisible6 = useIsVisible(missionSmallScreenRef);
+  const visionSmallScreenRef = useRef();
+  const isVisible7 = useIsVisible(visionSmallScreenRef);
+  const approachSmallScreenRef = useRef();
+  const isVisible8 = useIsVisible(approachSmallScreenRef);
 
 
+   
 
-
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
   useEffect(() => {
     if (typeof window !== "undefined") {
+      
       window.addEventListener("resize", handleResize);
       handleResize();
-    }
+    } 
   }, []);
-
+ 
   function handleResize() {
+    console.log("aaaaaaaaaaaaaaaaa")
     setIsSmallScreen(window.innerWidth <= 992); // Adjust based on your breakpoints
   }
   return (
@@ -391,7 +401,7 @@ export default function About({ title, desc }) {
             <br />
             <div ref={missionBigScreenRef} className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
               <div 
-                className={`lg:col-span-5 ${
+                className={`lg:col-span-5 ${ 
                   isVisible2
                     ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
@@ -510,7 +520,7 @@ export default function About({ title, desc }) {
                   />
                   <div className="absolute bottom-2/4 translate-y-2/4 end-0 start-0 text-center"></div>
                 </div>
-              </div>   
+              </div>    
               <div 
               className={`lg:col-span-7 ${
                 isVisible4
