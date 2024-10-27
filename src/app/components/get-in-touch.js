@@ -164,7 +164,7 @@ export default function GetInTouch() {
                     <h5 className="text-lg dark:text-white mb-2 font-medium">
                       Phone
                     </h5>
-                    <p className="text-slate-400">+49 178 759 5846623</p>
+                    <p className="text-slate-400">+49 178 7846623</p>
                   </div>
                 </div>
 
