@@ -96,7 +96,7 @@ export default function Employers() {
               At StorkLink, we connect you with top-tier professionals tailored
               to your needs. Our services combine human expertise and market
               insights, ensuring you find the best candidates for crucial roles
-              and support your organization's success.
+              and support your organization&apos;s success.
             </p>
           </div>
         </div>
