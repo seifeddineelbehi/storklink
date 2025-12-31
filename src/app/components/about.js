@@ -67,8 +67,8 @@ export default function About({ title, desc }) {
                 ref={storyBigScreenRef}
                 className={`lg:col-span-5 ${
                   isVisible1
-                    ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
-                    : "opacity-0"
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
+                    : "opacity-0 "
                 }`}
               >
                 <div className="relative">
@@ -86,7 +86,7 @@ export default function About({ title, desc }) {
               </div>
               <div ref={storyBigScreenRef} className={`lg:col-span-7 ${
                   isVisible1
-                    ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="lg:ms-7">
@@ -125,7 +125,7 @@ export default function About({ title, desc }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
               <div ref={missionBigScreenRef} className={`lg:col-span-7 ${
                   isVisible2
-                    ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="lg:ms-7">
@@ -146,7 +146,7 @@ export default function About({ title, desc }) {
               <div ref={missionBigScreenRef}
                 className={`lg:col-span-5 ${
                   isVisible2
-                    ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -173,7 +173,7 @@ export default function About({ title, desc }) {
               <div ref={visionBigScreenRef}
                 className={`lg:col-span-5 ${
                   isVisible3
-                    ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -191,7 +191,7 @@ export default function About({ title, desc }) {
               </div>
               <div className={`lg:col-span-7 ${ 
                   isVisible3
-                    ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="lg:ms-7">
@@ -225,7 +225,7 @@ export default function About({ title, desc }) {
             <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 gap-10 items-center">
               <div ref={approachBigScreenRef} className={`lg:col-span-7 ${
                   isVisible4
-                    ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="lg:ms-7">
@@ -305,7 +305,7 @@ export default function About({ title, desc }) {
               <div ref={approachBigScreenRef}
                 className={`lg:col-span-5 ${
                   isVisible4
-                    ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -344,7 +344,7 @@ export default function About({ title, desc }) {
               <div 
                 className={`lg:col-span-5 ${
                   isVisible1
-                    ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -363,7 +363,7 @@ export default function About({ title, desc }) {
               <div 
                  className={`lg:col-span-7 ${
                   isVisible1
-                  ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                  ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                   : "opacity-0"
               }`}>
                 <div className="lg:ms-7">
@@ -403,7 +403,7 @@ export default function About({ title, desc }) {
               <div 
                 className={`lg:col-span-5 ${ 
                   isVisible2
-                    ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -422,7 +422,7 @@ export default function About({ title, desc }) {
               <div
                  className={`lg:col-span-7 ${
                   isVisible2
-                  ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                  ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                   : "opacity-0"
               }`}>
                 <div className="lg:ms-7">
@@ -451,7 +451,7 @@ export default function About({ title, desc }) {
               <div
                 className={`lg:col-span-5 ${
                   isVisible3
-                    ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -470,7 +470,7 @@ export default function About({ title, desc }) {
               <div
                  className={`lg:col-span-7 ${
                 isVisible3
-                  ? "animate-fade-left animate-once animate-duration-2000 animate-ease-in"
+                  ? "animate-fade-left animate-once animate-duration-1000 animate-ease-out"
                   : "opacity-0"
               }`}>
                 <div className="lg:ms-7">
@@ -505,7 +505,7 @@ export default function About({ title, desc }) {
               <div
                 className={`lg:col-span-5 ${
                   isVisible4
-                    ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                    ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                     : "opacity-0"
                 }`}>
                 <div className="relative">
@@ -524,7 +524,7 @@ export default function About({ title, desc }) {
               <div 
               className={`lg:col-span-7 ${
                 isVisible4
-                  ? "animate-fade-right animate-once animate-duration-2000 animate-ease-in"
+                  ? "animate-fade-right animate-once animate-duration-1000 animate-ease-out"
                   : "opacity-0"
               }`}>
                 <div className="lg:ms-7">

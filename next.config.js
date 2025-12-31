@@ -6,13 +6,10 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Remove the experimental.appDir - it's not needed anymore
   images: {
     unoptimized: true,
   },
-   
-}; 
+};
 
 module.exports = withNextIntl(nextConfig);
